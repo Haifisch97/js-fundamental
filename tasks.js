@@ -1,5 +1,5 @@
 //1
-function compact (array) {
+function compact(array) {
     const compactedArray = [];
     array.forEach(element => compactedArray.includes(element) ? null : compactedArray.push(element));
     return compactedArray;
@@ -18,17 +18,19 @@ function filterByAge(arr, min = 18) {
 }
 //5
 function countPower(arr) {
-  const answer = new Array(3).fill(0);
+    const count = new Array(3).fill(0);
     arr.forEach(item => {
         if (item.power > 9 && item.power < 100) {
-            answer[0] += 1;
+            count[0] += 1;
         } else if (item.power > 99 && item.power < 1000) {
-            answer[1] += 1;
+            count[1] += 1;
         } else if (item.power > 999) {
-            answer[2] += 1;
+            count[2] += 1;
         }
-    })
+    });
+    return count;
 }
+
 //6
 function splitArr(arr) {
     const numbers = [];
@@ -68,10 +70,10 @@ function sortArr(arr) {
     const sortedArr = [];
     const oddArr = [];
     const evenArr = [];
-    arr.sort((a, b) => a - b).forEach(item => { item % 2 ? oddArr.push(item) : evenArr.push(item);})
+    arr.sort((a, b) => a - b).forEach(item => { item % 2 ? oddArr.push(item) : evenArr.push(item); })
     const max = oddArr.length > evenArr.length ? oddArr.length * 2 : evenArr.length * 2 - 1;
     for (let i = 0; i < max; i++) {
-        if (i % 2 ) {
+        if (i % 2) {
             let oddValue = oddArr.shift();
             sortedArr[i] = oddValue === undefined ? null : oddValue;
         } else {
@@ -96,7 +98,7 @@ function toCapitalize(str) {
     return str.split(' ').map(item => item[0].toUpperCase() + item.slice(1).toLowerCase()).join(' ');
 }
 //10
-function checkPerson (login, password) {
+function checkPerson(login, password) {
     const users = [
         { login: 'admin', password: '1212' },
         { login: 'user1', password: '1111' },
