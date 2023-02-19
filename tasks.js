@@ -11,7 +11,7 @@ function createArray(start, end) {
     return array;
 };
 //3
-const trimSpace = (str) => str.replace(/\s+/g, ' ').trim();
+const trimSpace = (str) => str.replace(/\s+/g, '').split(',').sort().join(', ');
 //4
 function filterByAge(arr, min = 18) {
     return arr.filter(item => item.age >= min);
