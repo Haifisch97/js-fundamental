@@ -1,0 +1,14 @@
+.intro {
+    margin-top: 50px;
+}
+.intro__info-container {
+    margin-top: 30px;
+}
+.intro__btn-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+.intro__btn {
+    margin: 0 10px;
+}

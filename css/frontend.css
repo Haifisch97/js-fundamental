@@ -1,0 +1,12 @@
+.frontend {
+   margin-top: 30px;
+}
+.frontend__text {
+    margin-top: 20px;
+}
+.frontend__technologies-container {
+    margin-top: 40px;
+}
+.frontend__technologies-image {
+    object-fit: contain;
+}
