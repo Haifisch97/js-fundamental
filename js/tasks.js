@@ -6,7 +6,12 @@ function compact(array) {
 };
 //2
 function createArray(start, end) {
+    if (start === end) return [start];
     const array = [];
+    if (start > end) {
+        for (let i = start; i >= end; i--) array.push(i);
+        return array;
+    }
     for (let i = start; i <= end; i++) array.push(i);
     return array;
 };
@@ -20,16 +25,19 @@ function filterByAge(arr, min = 18) {
 function countPower(arr) {
     const count = new Array(3).fill(0);
     arr.forEach(item => {
-        if (item.power > 9 && item.power < 100) {
+        if (item > 9 && item < 100) {
             count[0] += 1;
-        } else if (item.power > 99 && item.power < 1000) {
+        } else if (item > 99 && item < 1000) {
             count[1] += 1;
-        } else if (item.power > 999) {
+        } else if (item > 999) {
             count[2] += 1;
         }
     });
     return count;
 }
+
+
+
 
 //6
 function splitArr(arr) {
@@ -65,6 +73,30 @@ const result5 = start;
 //7.6
 for (let i = middle.length - 1; i >= 0; i--) end.unshift(middle[i]);
 for (let i = start.length - 1; i >= 0; i--) end.unshift(start[i]);
+
+function concatArr (start, middle, end, way) {
+    switch (way) {
+        case 1:
+            return [...start, ...middle, ...end];
+        case 2:
+            return start.concat(middle, end);
+        case 3:
+            return start.concat(middle).concat(end);
+        case 4:
+            for (let i = 0; i < miggle.length; i++) start.push(middle[i]);
+            for (let i = 0; i < end.length; i++) start.push(end[i]);
+            return start;
+        case 5:
+            for (let i of middle) start.push(i);
+            for (let i of end) start.push(i);
+            return start;
+        case 6:
+            for (let i = middle.length - 1; i >= 0; i--) end.unshift(middle[i]);
+            for (let i = start.length - 1; i >= 0; i--) end.unshift(start[i]);
+            return end;
+    }
+}
+concatArr(start, middle, end, 6);
 //8
 function sortArr(arr) {
     const sortedArr = [];
