@@ -174,7 +174,7 @@ const taskList = [
                 case 3:
                     return start.concat(middle).concat(end);
                 case 4:
-                    for (let i = 0; i < miggle.length; i++) start.push(middle[i]);
+                    for (let i = 0; i < middle.length; i++) start.push(middle[i]);
                     for (let i = 0; i < end.length; i++) start.push(end[i]);
                     return start;
                 case 5:
