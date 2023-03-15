@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework-4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/homework4.css">
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-md bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">How I learn...</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Frontend
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item task-1" href="#">HTML/CSS</a></li>
+                                <li><a class="dropdown-item task-1" href="javascript-page.html">JavaScript</a></li>
+                                <li><a class="dropdown-item task-1" href="#">React</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="container homework-links">
+            <h2>Homework 4</h2>
+            <a class="intro__btn btn btn-primary" href="homework3.html" role="button">Homework-3</a>
+            <a class="intro__btn btn btn-primary" href="homework4.html" role="button">Homework-4</a>
+        </section>
+        <section class="container task-one">
+            <h3>Task 1</h3>
+            <p>
+                Реалізуйте програму, яка по натисканню на кнопку виводитиме повідомлення
+                "I was pressed!", при наведенні на кнопку виводитиме повідомлення "Mouse on me!", а при відведенні
+                курсора миші виводитиме повідомлення "Mouse is not on me!".
+            </p>
+            <button class="btn btn-primary task-one-btn">Click me</button>
+            <span class="task-one-output"></span>
+
+        </section>
+        <section class="container task-two">
+            <h3>Task 2</h3>
+            <p>
+                На сторінці потрібно реалізувати 2 випадаючих списки. У першому містяться назви країн, у другому – назви
+                міст. Реалізувати роботу таким чином, щоб коли вибирається з лівого випадаючого списку певна країна - в
+                правому випадаючому списку з'являлися міста цієї країни. Список міст формується динамічно, через
+                JavaScript. Також потрібно нижче вивести назву обраної країни і місто.
+            </p>
+            <select name="country" id="country">
+                <option value="zero">Select Country</option>
+                <option value="ger">Germany</option>
+                <option value="usa">USA</option>
+                <option value="ukr">Ukraine</option>
+            </select>
+            <select name="city" id="city"></select>
+            <p class="task-two-output"></p>
+        </section>
+        <section class="container task-three">
+            <h3>Task 3</h3>
+            <p>
+                Напишіть функцію, яка приймає рядкові дані і виконує перевірку на їх відповідність емейлу.
+                Вимоги: <br>
+                • Цифри (0-9).<br>
+                • Тільки латинські літери в великому (A-Z) і малому (a-z) регістрах.<br>
+                • В тілі емейла допустимі лишеі символи “_” і “-”. Але вони не можуть бути 1-им символом емейлу.<br>
+                • Символ “-” не може повторюватися.
+            </p>
+            <pre>
+                checkEmail('my_mail@gmail.com');
+                Email is correct!
+                checkEmail('#my_mail@gmail.com');
+                Email is not correct!
+                checkEmail('my_ma--il@gmail.com');
+                Email is not correct!
+            </pre>
+            <input type="text" class="task-three-input">
+            <button class="btn btn-primary task-three-btn">Check</button>
+            <p class="task-three-output"></p>
+        </section>
+        <section class="container task-four">
+            <h3>Task 4</h3>
+            <p>
+                Реалізувати валідацію значень поля, якщо значення більше-рівне 8 символів, містить числа, літери у
+                верхньому і нижньому регістрі та хоч 1 символ (_#!) то бекграунд закрашувати зеленим кольором а в іншому
+                випадку червоним (закрашування бекграунду відбувається при введені даних)
+            </p>
+            <input type="text" class="task-four-input">
+        </section>
+    </main>
+    <footer></footer>
+    <script src="js/hw4/task-1.js"></script>
+    <script src="js/hw4/task-2.js"></script>
+    <script src="js/hw4/task-3.js"></script>
+    <script src="js/hw4/task-4.js"></script>
+    <script src="js/hw4/task-5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

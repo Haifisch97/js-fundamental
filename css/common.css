@@ -2,7 +2,8 @@
     font-size: 1.1rem;
  }
 .container {
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     border: 1px solid lightgray;
     border-radius: 5px;
     padding: 30px;

@@ -1,0 +1,33 @@
+@import url("common.css");
+@import url("header.css");
+
+.task-one-output {
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    padding: 15px;
+    margin: 10px;
+}
+
+.task-two-output {
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+    width: 500px;
+    height: 50px;
+}
+
+.task-three-output {
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 10px;
+    width: 500px;
+    height: 50px;
+}
+
+.task-four-input {
+    width: 500px;
+    height: 50px;
+    margin: 10px;
+}
