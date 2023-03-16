@@ -31,3 +31,10 @@
     height: 50px;
     margin: 10px;
 }
+
+.task-five-form {
+    width: 40%;
+    padding: 20px;
+    margin: auto;
+    border: 1px solid #000;
+}

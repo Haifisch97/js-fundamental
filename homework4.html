@@ -62,7 +62,7 @@
                 курсора миші виводитиме повідомлення "Mouse is not on me!".
             </p>
             <button class="btn btn-primary task-one-btn">Click me</button>
-            <span class="task-one-output"></span>
+            <span class="task-one-output">Mouse is not on me!</span>
 
         </section>
         <section class="container task-two">
@@ -112,6 +112,50 @@
                 випадку червоним (закрашування бекграунду відбувається при введені даних)
             </p>
             <input type="text" class="task-four-input">
+        </section>
+        <section class="container task-five">
+            <h3>
+                Task 5
+            </h3>
+            <p>Зверстати форму наведене зправа 
+При кліку на Create Account перевірити:<br>
+- чи заповнені всі поля та чи поставлена галочка в полі checkbox<br>
+- перевірити чи значення в полі Password та Confirm Password співпадають, якщо все вірно то вивести повідомлення нижче кнопки Create Account<br>
+- зробити валідацію fullName, яке має складатись мінімум із 2-х слів<br>
+- зробити валідацію електронної пошти по типу як ми робили в темі по regExp<br>
+- зробити валідацію паролю як в задачі №5 практичного дзвінка<br>
+- зробити валідацію телефонного номеру щоб він був в форматі +00-000-000-00-00, але щоб не підпадали(тобто не проходили валідацію) номери телефонів із кодом країни +375 та +7<br>
+            </p>
+<!--напиши формуяка має поля: повне ім'я, ел пошта, телефон, пароль, підтведження паролю, чекбокч погодження з правилами і кнопка відправити -->
+<form action="" class="task-five-form">
+    <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="fullName" placeholder="Full Name">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="@gmail.com">
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Phone</label>
+        <input type="tel" class="form-control" id="phone" placeholder="+00-000-000-00-00">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password">
+    </div>
+    <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
+    </div>
+    <div class="mb-3">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+            I agree to the terms and conditions
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary" id="createAccount">Create Account</button>
+</form>
         </section>
     </main>
     <footer></footer>
