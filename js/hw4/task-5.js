@@ -16,7 +16,7 @@ const checkbox = document.getElementById('flexCheckDefault');
 const createAccount = document.getElementById('createAccount');
 
 const checkFullName = () => {
-    let checked = (/\s/).test(fullName.value);
+    let checked = (/^[a-zA-Z]+(?: [a-zA-Z]+)+$/).test(fullName.value);
     if (!checked) {
         fullName.style.border = '1px solid red';
     } else {
@@ -26,7 +26,7 @@ const checkFullName = () => {
 }
 
 const checkEmail = () => {
-    let checked = (/^[a-zA-Z0-9]+\w*-?\w*@[a-z]{2,}(?:.[a-z]{2,}){1,2}$/).test(email.value);
+    let checked = (/^[a-zA-Z0-9]+(?:[-.]?\w+)+@[a-z]{2,}(?:.[a-z]{2,}){1,2}$/).test(email.value);
     if (!checked) {
         email.style.border = '1px solid red';
     } else {
@@ -36,6 +36,16 @@ const checkEmail = () => {
 }
 
 const checkPassword = () => {
+    let checked = (/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[\S]{8,}$/).test(password.value);
+    if (!checked) {
+        password.style.border = '1px solid red';
+    } else {
+        password.style.border = '1px solid green';
+    }
+    return checked;
+}
+
+const checkConfirmPassword = () => {
     let checked = password.value === confirmPassword.value;
     if (!checked) {
         confirmPassword.style.border = '1px solid red';
@@ -61,7 +71,7 @@ const checkCheckbox = () => {
 
 createAccount.addEventListener('click', (e) => {
     e.preventDefault();
-    if (checkFullName() && checkEmail() && checkPassword() && checkPhone() && checkCheckbox()) {
+    if (checkFullName() && checkEmail() && checkConfirmPassword() && checkPhone() && checkCheckbox() && checkPassword()) {
          alert('Дані введені правильно');   
     } else {
         alert('Перевірте правильність введених даних');
@@ -71,4 +81,5 @@ createAccount.addEventListener('click', (e) => {
 fullName.addEventListener('blur', checkFullName);
 email.addEventListener('blur', checkEmail);
 phone.addEventListener('blur', checkPhone);
-confirmPassword.addEventListener('blur', checkPassword);
+password.addEventListener('blur', checkPassword)
+confirmPassword.addEventListener('blur', checkConfirmPassword);
